@@ -7,19 +7,16 @@ permalink: /community/
 <body>
 	<div class="container">
 		<div class="page-header">
-			<h1>HackGT Community</h1>
-		</div>
-		<div class = "row text-center">
-			<h2>Hacker of the Week</h2>
+			<h1>Hacker of the Week</h1>
 		</div>
 		<div class = "row">
 			{% for hacker in site.data.hackers limit:1 %}
-			<div class = "col col-lg-6 col-md-6 col-sm-12 text-right">
+			<div class = "col col-lg-6 col-md-6 col-sm-12 text-center">
 				<img src="{{hacker.picture}}">
 			</div>
-			<div class = "col col-lg-6 col-md-6 col-sm-12">
-				<h2>{{hacker.name}}</h2>
-				<h3>{{hacker.week }}</h3>
+			<div class = "col col-lg-6 col-md-6 col-sm-12 hacker-main">
+				<h2 class="text-center name">{{hacker.name}}</h2>
+				<h4 class="text-center date">{{hacker.week }}</h4>
 				<p>{{hacker.description}}</p>
 			</div>
 			{% endfor %}
@@ -35,8 +32,9 @@ permalink: /community/
 			</div>
 
 			{% if mod == 3 or forloop.index == forloop.length %}
-			</div>
+				</div>
 			{% endif %}
+
 		{% endfor %}
 	</div>
 </body>
