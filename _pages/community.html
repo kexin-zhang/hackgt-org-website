@@ -34,7 +34,7 @@ permalink: /community/
 				<img src="{{hacker.picture}}">
 			</div>
 
-			{% if mod == 3%}
+			{% if mod == 3 or forloop.index == forloop.length %}
 			</div>
 			{% endif %}
 		{% endfor %}
