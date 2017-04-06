@@ -154,4 +154,20 @@ body {
 
 .hacker-main .name {
 	margin-bottom: 0;
+	font-weight: bold;
+}
+
+.hacker-main .github-link i {
+	font-size: 3.5rem;
+	color: #86BBD8;
+}
+
+.hacker-main .facebook-link i {
+	font-size: 3.5rem;
+	padding-right: 1rem;
+	color: #9EE493;
+}
+
+.hacker-main .links {
+	padding-top: 1rem;
 }
