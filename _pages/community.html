@@ -9,12 +9,12 @@ permalink: /community/
 		<div class="page-header">
 			<h1>Hacker of the Week</h1>
 		</div>
-		<div class = "row">
+		<div class = "row hacker-main">
 			{% for hacker in site.data.hackers limit:1 %}
 			<div class = "col col-lg-6 col-md-6 col-sm-12 text-center">
 				<img src="{{hacker.picture}}">
 			</div>
-			<div class = "col col-lg-6 col-md-6 col-sm-12 hacker-main">
+			<div class = "col col-lg-6 col-md-6 col-sm-12">
 				<h2 class="text-center name">{{hacker.name}}</h2>
 				<h4 class="text-center date">{{hacker.week }}</h4>
 				<p>{{hacker.description}}</p>
@@ -28,11 +28,13 @@ permalink: /community/
 		{% for hacker in site.data.hackers offset:1 %}
 			{% assign mod = forloop.index0 | modulo:4 %}
 			{% if mod == 0%}
-				<div class = "row">
+				<div class = "row text-center">
 			{% endif %}
 
 			<div class="col col-lg-3 col-md-3 col-sm-12">
-				<img src="{{hacker.picture}}">
+					<center>
+						<img src="{{hacker.picture}}">
+					</center>
 			</div>
 
 			{% if mod == 3 or forloop.index == forloop.length %}
